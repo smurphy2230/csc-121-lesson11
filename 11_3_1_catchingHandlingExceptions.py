@@ -5,7 +5,7 @@
 #      print("Integer cannot have a decimal point or comma.")
 #  else:
 #      print("Integer entered: ", x)
-#  
+#
 #  try:
 #      salary = float(input("Enter annual salary: "))
 #  except:
@@ -47,3 +47,31 @@
 #              print("New salary: ", salary)
 #              break
 #  --------------------------------
+try:
+    print("1: Standard shipping $1.99 per pound")
+    print("2: Two-day shipping $2.99 per pound")
+    print("3: Overnight delivery $4.99 per pound")
+    shipping = int(input("Please enter 1, 2 or 3: "))
+except:
+    print("Invalid choice. Standard shipping is chosen by default")
+    shipping = 1
+
+print()
+while True:
+    try:
+        weight = float(input("Enter weight: "))
+    except:
+        print("Invalid weight")
+    else:
+        break
+
+print()
+if shipping == 1:
+    rate = 1.99
+elif shipping == 2:
+    rate = 2.99
+elif shipping == 3:
+    rate = 4.99
+
+shipping_charge = weight * rate
+print("Shipping charge: ", shipping_charge)
