@@ -15,15 +15,15 @@
 #      print("New salary:", salary)
 #  ----------------------------
 #  using try and except to catch exceptions in for loops. without these blocks the loop terminates #  immediately if any input in invalid
-#  print("This program calculated new salary for 3 employees.")
-#  for i in range(3):
-#      try:
-#          salary = float(input("Enter annual salary: "))
-#      except:
-#          print("Salary must be a numerical value with no commas.")
-#      else:
-#          salary = salary + salary * 0.05
-#          print("New salary: ", salary)
+print("This program calculates new salary for 3 employees.")
+for i in range(3):
+    try:
+        salary = float(input("Enter annual salary: "))
+    except:
+        print("Salary must be a numerical value with no commas.")
+    else:
+        salary = salary + salary * 0.05
+        print("New salary: ", salary)
 #  -----------------------------
 #  use try and except blocks to validate input
 #  while True:
@@ -47,31 +47,31 @@
 #              print("New salary: ", salary)
 #              break
 #  --------------------------------
-try:
-    print("1: Standard shipping $1.99 per pound")
-    print("2: Two-day shipping $2.99 per pound")
-    print("3: Overnight delivery $4.99 per pound")
-    shipping = int(input("Please enter 1, 2 or 3: "))
-except:
-    print("Invalid choice. Standard shipping is chosen by default")
-    shipping = 1
-
-print()
-while True:
-    try:
-        weight = float(input("Enter weight: "))
-    except:
-        print("Invalid weight")
-    else:
-        break
-
-print()
-if shipping == 1:
-    rate = 1.99
-elif shipping == 2:
-    rate = 2.99
-elif shipping == 3:
-    rate = 4.99
-
-shipping_charge = weight * rate
-print("Shipping charge: ", shipping_charge)
+#  try:
+#      print("1: Standard shipping $1.99 per pound")
+#      print("2: Two-day shipping $2.99 per pound")
+#      print("3: Overnight delivery $4.99 per pound")
+#      shipping = int(input("Please enter 1, 2 or 3: "))
+#  except:
+#      print("Invalid choice. Standard shipping is chosen by default")
+#      shipping = 1
+#
+#  print()
+#  while True:
+#      try:
+#          weight = float(input("Enter weight: "))
+#      except:
+#          print("Invalid weight")
+#      else:
+#          break
+#
+#  print()
+#  if shipping == 1:
+#      rate = 1.99
+#  elif shipping == 2:
+#      rate = 2.99
+#  elif shipping == 3:
+#      rate = 4.99
+#
+#  shipping_charge = weight * rate
+#  print("Shipping charge: ", shipping_charge)
